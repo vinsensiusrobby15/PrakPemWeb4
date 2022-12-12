@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #004737;
+  font-family: monospace;
+  color: #000;
+}
+
+.jumbotron {
+  text-align: center;
+  padding: 40px;
+  background-color: #f9bc61;
+}
+
+.box {
+  width: 350px;
+  padding: 40px 10px;
+  margin: 50px auto 0 auto;
+  background-color: #004737;
+  border-radius: 5px;
+}
+.box input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #004737;
+  color: #f9bc61;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
+}
+
+.result-line {
+  width: 100%;
+  text-align: center;
+}

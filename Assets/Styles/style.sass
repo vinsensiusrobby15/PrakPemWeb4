@@ -1,0 +1,242 @@
+$Prime_cl: #007acc
+$SeC_cl: #c5d9f1
+$Prime_cl_dark: #3e3e3e
+$Sec_cl_dark: #8b8b8b
+$Font_dark: #80e792
+$Trans_delay: 0.6s
+*
+    box-sizing: border-box
+    margin: 0
+body
+    font-family: monospace
+    transition: $Trans_delay
+header
+    display: inline
+.jumbotron
+    padding: 60px
+    background-color: $Prime_cl
+    text-align: center
+    color: #fff
+    h1
+        font-size: 40px
+.dark
+    background-color: $Prime_cl_dark
+    transition: $Trans_delay
+    .jumbotron
+        color: $Font_dark
+        background-color: $Prime_cl_dark
+        transition: $Trans_delay
+    nav
+        background-color: $Sec_cl_dark
+        transition: $Trans_delay
+        .hide
+            color: $Font_dark
+        a
+            color: $Font_dark
+    #content 
+        background-color: $Prime_cl_dark
+        transition: $Trans_delay
+        .card
+            box-shadow: none
+            .subtitle
+                background-image: none
+                background-color: $Sec_cl_dark
+                color: $Font_dark
+                transition: $Trans_delay
+            .item
+                color: $Font_dark
+    fieldset
+        border: 2px solid $Font_dark
+        input, textarea
+            color: $Font_dark
+    button
+        background-color: $Sec_cl_dark
+        color: $Font_dark
+    aside
+        a
+            color: $Font_dark
+    footer
+        background-color: $Sec_cl_dark
+        color: $Font_dark
+        transition: $Trans_delay
+nav
+    padding: 15px
+    background-color: $SeC_cl
+    justify-content: space-between
+    display: flex
+    position: sticky
+    top: 0
+    a
+        text-decoration: none
+        margin-left: 20px
+        color: $Prime_cl
+        font-size: 18px
+        font-weight: 600
+        &:hover
+            text-decoration: underline
+
+.hide
+    display: none
+    font-size: 10px
+    margin-top: 25px
+    width: 138px
+    color: #000
+
+.switch
+    position: relative
+    display: inline-block
+    width: 45px
+    height: 23px
+    input
+        opacity: 0
+        width: 0
+        height: 0
+.slider
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: #ccc
+    transition: 0.4s
+    &:before
+        position: absolute
+        content: ""
+        height: 15px
+        width: 15px
+        left: 4px
+        bottom: 4px
+        background-color: #fff
+        transition: 0.4s
+.slider 
+    &:hover + .hide
+        display: grid
+        position: absolute
+        background-color: rgba(226, 224, 224, 0.4)
+
+input
+    &:checked + .slider
+        background-color: #9287cd
+    &:focus + .slider
+        box-shadow: 0 0 1px #9287cd
+    &:checked + .slider
+        &:before
+            transform: translateX(22px)
+main
+    overflow: auto
+#content
+    float: left
+    width: 65%
+aside
+    float: right
+    margin-top: 20px
+    width: 35%
+    padding: 5px
+    display: flex
+    justify-content: center
+    align-items: center
+.card
+    box-shadow: 0px 4px 8px 5px rgba(0,0,0,0.3)
+    border-radius: 5px
+    margin: 20px 5px
+.subtitle
+    padding: 15px
+    width: 100%
+    background-image: linear-gradient($Prime_cl, $SeC_cl)
+    margin-bottom: 10px
+    border-top-left-radius: 5px
+    border-top-right-radius: 5px
+    font-size: 20px
+.item
+    text-align: justify
+    padding: 0 10px 10px 10px
+    font-size: 15px
+    &-box
+        width: 50%
+        text-align: center
+        margin: 15px auto
+form
+    font-family: monospace
+input, textarea
+    width: 100%
+    padding: 5px
+    border: none
+    background: none
+fieldset
+    border-radius: 5px
+textarea
+    height: 350px
+    resize: none
+    overflow: hidden
+button
+    width: 100%
+    margin-top: 10px
+    padding: 10px
+    border: none
+    background: $Prime_cl
+    text-transform: uppercase
+    font-weight: 600
+    font-size: 18px
+    color: #fff
+    border-radius: 5px
+    &:hover
+        cursor: pointer
+.profile-img
+    width: 150px
+    border-radius: 100%
+.bio
+    margin-left: 5px
+    img
+        width: 15px
+    a
+        font-size: 15px
+        text-decoration: none
+        color: $Prime_cl
+        font-weight: 600
+footer
+    padding: 15px
+    text-align: center
+    background-color: $Prime_cl
+    font-weight: 600
+    color: #fff      
+@media screen and ( max-width: &1350px)
+    aside
+        flex-direction: column
+        text-align: center
+    .bio
+        text-align: left
+@media screen and ( max-width: &999px)
+    #content, aside
+        float: none
+        margin: auto
+    #content
+        width: 80%
+        transition: $Trans_delay
+    aside
+        flex-direction: row
+        width: 100%
+    main
+        overflow: hidden
+    .item-box
+        width: 70%
+        transition: $Trans_delay
+    .bio
+        text-align: left
+@media screen and ( max-width: &540px)
+    #content, aside
+        width: 100%
+        float: none
+        margin: auto
+        transition: $Trans_delay
+    aside
+        flex-direction: column
+    nav
+        text-align: center
+        a
+            margin-left: 0
+            margin: 10px
+    .item-box
+        width: 100%
+    .jumbotron
+        text-align: left
+        padding: 20px 5px
